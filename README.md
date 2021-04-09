@@ -5,6 +5,14 @@ This is because one filter might end up eliminating an important feature, which 
 Since most disease datasets are huge in dimension, an automatic diagnosis process through computing devices becomes complex and time-consuming. 
 Feature selection methods can be used to eliminate unnecessary information from a dataset.
 
+The Dataset used in this project is the Pima Indian Diabetes dataset.
+Link: https://www.kaggle.com/uciml/pima-indians-diabetes-database/code
+
+This dataset has multiple ‘0’ values present for five features e.g. Blood pressure, Glucose etc. which are not natural for any person. 
+These values have been replaced by median values of respective classes. Other than this abnormal data, this dataset is highly imbalanced. 
+Non-Diabetic class has 500 records and Diabetic class (minority class) has 268 records. 
+Synthetic Minority Oversampling Technique (SMOTE) is used to remove this imbalance by creating samples of minority class using the present data.
+
 Sets of different ranking lists with corresponding filter-based rankers(here 3 such rankers shown) have been created.
 The subset of best features is then taken and its union has been obtained. 
 After obtaining the union of the best subsets of features, classification algorithms have been applied.
@@ -17,4 +25,6 @@ The least ranked features by the ensemble are the ones which have least importan
 Thus, MIRFCS also provides the information about the noisy, redundant or unnecessary features which are then discarded. 
 Furthermore, selection of best set of features reduces the time consumed for analysis. 
 All the three diseases which have been studied in this work are incurable but if diagnosed in time, can be controlled. 
-This system can do that with the diagnosis time being minimum, treatment starting at the earliest, lesser attributes meaning lesser tests, hence economically benefiting for the patients.
+This system can do that with the diagnosis time being minimum, treatment starting at the earliest, lesser attributes meaning lesser tests, hence economically benefiting for the patients. 
+
+
